@@ -1,9 +1,5 @@
-button {
-  padding: 10px;
-  cursor: pointer;
-  width: 10%;
-  background-color: white;
-  color: #007bff;
-  border: none;
-  border-radius: 6px;
-}
+/* 
+    While this file isnt used, I personally like to always have a corresponding .css file to it's component or page. 
+    This way there is always a stylesheet to be used in case custom styles outside of the global styles are needed. 
+    Just add your styles and add the import in the .js file. 
+*/

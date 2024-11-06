@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Welcome to the RTS Labs Code Challenge.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with a React Frontend and an Express and MongoDB backend.\
+The frontend of this app is the deployed on Vercel is available here: [https://rts-labs-code-challenge.vercel.app/signin](https://rts-labs-code-challenge.vercel.app/signin).\
+The backend of the project is deployed using Render and is connecting to MongoDB Atlas Cloud for the database.\
+ATTENTION: When the app has been inactive for a period of time, Render spins down the backend so the first request made to sign in or sign up can take up to 50 seconds to complete in order to "wake up" render. After that initial request everything should be smooth! Cost of free deployments haha! Enjoy!
 
 ## Available Scripts
 
@@ -14,10 +17,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `node index.js`
+
+Runs the backend of the app.\
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tests are built wih Jest. 
 
 ### `npm run build`
 

@@ -3,14 +3,17 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/AuthRoutes');
 const stockRoutes = require('./routes/StockRoutes');
-require('dotenv').config();
+require('dotenv').config(); //load env variables
 
 const app = express();
 app.use(cors());
+
+// Middleware to parse JSON req bodies
 app.use(express.json());
 
 connectDB();
 
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/stock', stockRoutes);
 

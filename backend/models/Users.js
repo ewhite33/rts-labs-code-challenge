@@ -1,3 +1,4 @@
+// Model for users. ("Table entity" if you will)
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({

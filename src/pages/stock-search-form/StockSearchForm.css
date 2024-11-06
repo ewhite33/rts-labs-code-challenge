@@ -1,36 +1,5 @@
-.form-container {
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-  }
-
-.search-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .search-form label {
-    text-align: left;
-    margin-bottom: 1px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .search-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-  
-  .search-form button {
-    padding: 10px;
-    cursor: pointer;
-    width: 48%;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    margin-top: 10px;
-  }
+/* 
+    While this file isnt used, I personally like to always have a corresponding .css file to it's component or page. 
+    This way there is always a stylesheet to be used in case custom styles outside of the global styles are needed. 
+    Just add your styles and add the import in the .js file. 
+*/

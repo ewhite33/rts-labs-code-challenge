@@ -1,0 +1,55 @@
+/* global styles to style the entirety of this application */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    background-color: #303346;
+    color: white;
+}
+
+.form-container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 1px;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    width: 150px;
+    background-color: #388700;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+span {
+    margin-top: 10px;
+}
+
+
+p {
+    margin-top: 50px;
+}

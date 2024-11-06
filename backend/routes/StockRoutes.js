@@ -1,3 +1,4 @@
+// Routes for stock data endpoint
 const express = require('express');
 const { getStockPrice } = require('../controllers/StockController');
 const authenticateToken = require('../middleware/AuthMiddleware');

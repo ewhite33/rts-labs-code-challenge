@@ -6,9 +6,10 @@ import SignUp from './pages//sign-up/SignUp';
 import StockSearchForm from './pages/stock-search-form/StockSearchForm';
 import { AuthProvider } from './context/AuthContext'; 
 
+// For protecting routes against unauthorized user access. Specifically used for the stock search page.
 const ProtectedRoute = ({ children }) => {
     const token = localStorage.getItem('token');
-    return token ? children : <Navigate to="/signin" />;
+    return token ? children : <Navigate to="/signin" />; // If not authenticated redirect to signin page.
 };
 
 function App() {
