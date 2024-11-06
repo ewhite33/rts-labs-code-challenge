@@ -20,8 +20,18 @@ function StockSearchForm() {
             const response = await axios.get(`${apiBaseUrl}/api/stock/${symbol}`, { // Send get request to the endpoint with a symbol and token
                 headers: { Authorization: `Bearer ${token}` } // Attach token for authorization
             });
-            setOpeningPrice(response.data.openingPrice); // set price from response
-            setError('');
+
+            const fetchedOpeningPrice = response.data.openingPrice;
+
+            // Check if the price is null or 0
+            if (fetchedOpeningPrice === null || fetchedOpeningPrice === 0) {
+                setOpeningPrice(null); // Clears any previously displayed price
+                setError('Stock symbol not found. Try another symbol'); // Set error message leting the user know that it was an unvalid stock symbol
+            } else {
+                //  When price is valid, update state and clear any previous error
+                setOpeningPrice(fetchedOpeningPrice);
+                setError(''); // Clear any existing error message
+            }
         } catch (error) {
             setError('Error fetching stock data or unauthorized access');
         }
@@ -33,20 +43,20 @@ function StockSearchForm() {
             <div className="form">
                 <h2>Stock Search</h2>
 
-                <label htmlFor="search">Search</label>
+                <label htmlFor="search">Stock Symbol Search</label>
                 <input
                     type="text"
                     name="search"
                     id="search"
                     value={symbol}
                     onChange={(e) => setSymbol(e.target.value)}
-                    placeholder="Enter stock symbol"
+                    placeholder="Ex: NFLX"
                 />
                 <span>
                     <button onClick={handleSearch}>Search</button>
                 </span>
             
-                {openingPrice && <p>Opening Price: ${openingPrice}</p>}
+                {openingPrice !== null && <p>Opening Price: ${openingPrice}</p>}
                 {error && <p style={{ color: "red" }}>{error}</p>}
             </div>
         </div>
