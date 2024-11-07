@@ -14,6 +14,13 @@ function StockSearchForm() {
     // Stock search function
     const handleSearch = async () => {
 
+        // Check to see if the input is emtpy before making the api call
+        if(!symbol.trim()) {
+            setError('Please enter a valid stock symbol');
+            setOpeningPrice(null); // make sure to clear any previous price
+            return;
+        }
+
         // grabs the token to include in the request
         const token = localStorage.getItem('token');
         try {
